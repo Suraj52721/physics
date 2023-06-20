@@ -8,20 +8,21 @@ class Syllabus extends StatefulWidget {
 }
 
 class _SyllabusState extends State<Syllabus> {
+  Color customColor = Color(0xFF081035);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: customColor,
         title: const Text('Syllabus'),
       ),
-      body: Container(
-        child: const Center(
+      body: const Center(
           child: Text(
             'Syllabus',
             style: TextStyle(fontSize: 24),
           ),
         ),
-      ),
+     
     );
   }
 }

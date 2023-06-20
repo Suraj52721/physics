@@ -14,7 +14,7 @@ class _CardboxState extends State<Cardbox> {
   @override
   Widget build(BuildContext context) {
     return Card(
-                  shape: RoundedRectangleBorder(
+                  shape: const RoundedRectangleBorder(
                     borderRadius: BorderRadius.only(
                       topLeft: Radius.circular(30),
                     )
@@ -24,20 +24,20 @@ class _CardboxState extends State<Cardbox> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => Syllabus(),
+                          builder: (context) => const Syllabus(),
                         ),
                       );
                       
                     },
                     splashColor: Colors.orange,
-                    child: Container(
+                    child: SizedBox(
                       width: 150,
                       height: 150,
                       
                       child: Center(
                         child: Text(
                           '${widget.text}',
-                          style: TextStyle(
+                          style: const TextStyle(
                             fontSize: 25,
                             fontWeight: FontWeight.bold,
                             color: Color(0xFF081035),

@@ -8,10 +8,12 @@ class TimeTable extends StatefulWidget {
 }
 
 class _TimeTableState extends State<TimeTable> {
+  Color customColor = Color(0xFF081035);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: customColor,
         title: const Text('TimeTable'),
       ),
       body: const Center(

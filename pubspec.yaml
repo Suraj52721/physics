@@ -37,10 +37,20 @@ dependencies:
   cupertino_icons: ^1.0.2
   shared_preferences: ^2.1.2
   flutter_svg: ^2.0.7
+  flutter_launcher_icons: ^0.13.1
+  firebase_core: ^2.14.0
+  firebase_auth: ^4.6.3
+  firebase_storage: ^11.2.3
+  firebase_ui_firestore: ^1.5.3
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+
+flutter_icons:
+  image_path: "assets/images/favicon.png" 
+  android: "launcher_icon"
+  ios: true
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is

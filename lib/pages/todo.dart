@@ -13,6 +13,7 @@ class ToDo extends StatefulWidget {
 class _ToDoState extends State<ToDo> {
   final _getval = TextEditingController();
   final _tasks= <String>[];
+  @override
   initState() {
     super.initState();
     _loadData();
@@ -39,7 +40,7 @@ class _ToDoState extends State<ToDo> {
       padding: const EdgeInsets.all(10),
       width: double.infinity,
       height: double.infinity,
-      color: Color(0xFF081035),
+      color: const Color(0xFF081035),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [

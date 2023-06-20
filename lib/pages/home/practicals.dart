@@ -8,10 +8,12 @@ class Practicals extends StatefulWidget {
 }
 
 class _PracticalsState extends State<Practicals> {
+  Color customColor = Color(0xFF081035);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: customColor,
         title: const Text('Practicals'),
       ),
       body: const Center(

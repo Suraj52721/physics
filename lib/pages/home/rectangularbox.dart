@@ -25,13 +25,13 @@ class _RboxState extends State<Rbox> {
           mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
             const SizedBox(height: 10),
-            Header(),
+            const Header(),
             SizedBox(
             height: 150,
             child: Container(
               margin: const EdgeInsets.only(left: 20, bottom: 10),
               //padding: const EdgeInsets.only(top: 80),
-              child: Column(
+              child: const Column(
                 mainAxisAlignment: MainAxisAlignment.end,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
@@ -52,9 +52,9 @@ class _RboxState extends State<Rbox> {
           children: <Widget>[
             Column(
               children: <Widget>[
-              Cardbox(text: 'Syllabus'),
+              const Cardbox(text: 'Syllabus'),
               Card(
-                  shape: RoundedRectangleBorder(
+                  shape: const RoundedRectangleBorder(
                     borderRadius: BorderRadius.only(
                       bottomLeft: Radius.circular(30),
                     )
@@ -65,11 +65,11 @@ class _RboxState extends State<Rbox> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => Books(),
+                          builder: (context) => const Books(),
                         ),
                       );
                     },
-                    child: Container(
+                    child: const SizedBox(
                       width: 150,
                       height: 150,
                       
@@ -94,7 +94,7 @@ class _RboxState extends State<Rbox> {
             Column(
               children: <Widget>[
                 Card(
-                  shape: RoundedRectangleBorder(
+                  shape: const RoundedRectangleBorder(
                     borderRadius: BorderRadius.only(
                       topRight: Radius.circular(30),
                     )
@@ -105,12 +105,12 @@ class _RboxState extends State<Rbox> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => Practicals(),
+                          builder: (context) => const Practicals(),
                         ),
                       );
                      
                     },
-                    child: Container(
+                    child: const SizedBox(
                       width: 150,
                       height: 150,
                       
@@ -129,7 +129,7 @@ class _RboxState extends State<Rbox> {
                 ),
 
                 Card(
-                  shape: RoundedRectangleBorder(
+                  shape: const RoundedRectangleBorder(
                     borderRadius: BorderRadius.only(
                       bottomRight: Radius.circular(30),
                     )
@@ -140,12 +140,12 @@ class _RboxState extends State<Rbox> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => TimeTable(),
+                          builder: (context) => const TimeTable(),
                         ),
                       );
                       
                     },
-                    child: Container(
+                    child: const SizedBox(
                       width: 150,
                       height: 150,
                       

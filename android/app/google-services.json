@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "218254275995",
+    "project_id": "physics-78e4c",
+    "storage_bucket": "physics-78e4c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:218254275995:android:f19e6200719aed89365d3e",
+        "android_client_info": {
+          "package_name": "com.example.physics"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "218254275995-d7q3uvc9jpo9nvl6fuc4h4mn5m9hngf6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDEdBoau5QDRf83zV6kMvDxuIvdIyyMCgQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "218254275995-d7q3uvc9jpo9nvl6fuc4h4mn5m9hngf6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

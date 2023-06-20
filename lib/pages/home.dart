@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:physics/pages/home/rectangularbox.dart';
-import 'package:physics/pages/loginpage.dart';
+import 'package:physics/pages/profile.dart';
 import 'package:physics/pages/todo.dart';
 import 'package:physics/pages/assignments.dart';
+
 
 
 class Home extends StatefulWidget {
@@ -15,11 +16,13 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+  
     int _currentindextab = 0;
+   
 
   @override
   Widget build(BuildContext context) {
-    final List< BottomNavigationBarItem> _navbaritems = [
+    final List< BottomNavigationBarItem> navbaritems = [
       const BottomNavigationBarItem(
         icon: Icon(Icons.home),
         label: 'Home',
@@ -41,38 +44,39 @@ class _HomeState extends State<Home> {
         backgroundColor: Color(0xFF081035),
       ),
     ];
-    final List<Widget> _pages = [
-      Rbox(),
-      Assignments(),
-      ToDo(),
-      LoginPage(),
+    final List pages = [
+      const Rbox(),
+      const Assignments(),
+      const ToDo(),
+      Profile(),
     ];
-    assert(_pages.length == _navbaritems.length);
+    assert(pages.length == navbaritems.length);
 
 
 
 
     return Scaffold(
       appBar: null,
-      drawer: new Drawer(
+      drawer: Drawer(
         backgroundColor: const Color.fromARGB(255, 23, 5, 89),
-        child: new ListView(
-          children: <Widget>[
-            new UserAccountsDrawerHeader(
-              accountName: const Text('User Name'),
-              accountEmail: const Text('user@email'),
+        child: ListView(
+          children: const <Widget>[
+             UserAccountsDrawerHeader(
+              accountName: Text('User Name'),
+              accountEmail: Text('user@email'),
     ),],),),
       bottomNavigationBar: BottomNavigationBar(
         backgroundColor: const Color.fromARGB(255, 23, 5, 89),
-        items: _navbaritems,
+        items: navbaritems,
         currentIndex: _currentindextab,
         onTap: (int index) {
           setState(() {
             _currentindextab = index;
+            
           });
         },
         ),
-      body: _pages[_currentindextab], 
+      body: pages[_currentindextab], 
       );
   }
 }

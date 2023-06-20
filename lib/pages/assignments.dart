@@ -13,13 +13,13 @@ class _AssignmentsState extends State<Assignments> {
     return Container(
       width: double.infinity,
       height: double.infinity,
-      color: Color(0xFF081035),
+      color: const Color(0xFF081035),
       child: Stack(
         children: [Container(
           width: double.infinity,
           height: double.infinity,
           alignment: Alignment.center,
-          child: Text(
+          child: const Text(
             'You have no assignments due!',
             textAlign: TextAlign.center,
             style: TextStyle(
@@ -35,7 +35,7 @@ class _AssignmentsState extends State<Assignments> {
             onPressed: () {
               
             },
-            child: Icon(Icons.add),
+            child: const Icon(Icons.add),
           ),
         ),
         ]

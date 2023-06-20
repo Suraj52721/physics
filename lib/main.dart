@@ -1,7 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:physics/pages/home.dart';
+import 'package:physics/pages/loginpage.dart';
+import 'package:firebase_core/firebase_core.dart';
 
-void main() {
+
+void main() async{
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+
+  
+
   runApp(const Physics());
 }
 
@@ -21,7 +28,9 @@ class _PhysicsState extends State<Physics> {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const Home(title: 'Physics'),
+      home: LoginPage(),
     );
   }
 }
+
+

@@ -8,10 +8,12 @@ class Books extends StatefulWidget {
 }
 
 class _BooksState extends State<Books> {
+  Color customColor = Color(0xFF081035);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: customColor,
         title: const Text('Books'),
       ),
       body: const Center(
