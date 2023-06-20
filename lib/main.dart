@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:physics/pages/loginpage.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:physics/pages/home.dart';
 
 
 void main() async{
@@ -20,6 +22,12 @@ class Physics extends StatefulWidget {
 }
 
 class _PhysicsState extends State<Physics> {
+  checkLogin(){
+    if (FirebaseAuth.instance.currentUser == null){
+      return LoginPage();
+    }else{
+      return Home(title: 'Home');}
+  }
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -28,7 +36,7 @@ class _PhysicsState extends State<Physics> {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: LoginPage(),
+      home: checkLogin(),
     );
   }
 }
