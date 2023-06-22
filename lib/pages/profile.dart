@@ -22,7 +22,7 @@ class _ProfileState extends State<Profile> {
     navigatorN(){
       Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => LoginPage()));
     };
-    final userName= FirebaseAuth.instance.currentUser!.email!.split('@')[0];
+    final userName= FirebaseAuth.instance.currentUser!.displayName;
     return Scaffold(
       appBar: null,
       body:Container(

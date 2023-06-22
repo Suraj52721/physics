@@ -15,12 +15,15 @@ class SignUpPage extends StatefulWidget {
 class _SignUpPageState extends State<SignUpPage> {
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
+  final TextEditingController nameController = TextEditingController();
+
 
   void signUpUser() async {
-    FirebaseAuthMethods(FirebaseAuth.instance).createUserWithEmailAndPassword(
+    await FirebaseAuthMethods(FirebaseAuth.instance).createUserWithEmailAndPassword(
+      nameController.text.trim(),
       emailController.text.trim(),
       passwordController.text.trim(),
-      context,);
+      context);
       if (await FirebaseAuth.instance.currentUser != null) {
         FirebaseAuth.instance.signOut();
         Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => LoginPage()));
@@ -67,6 +70,19 @@ class _SignUpPageState extends State<SignUpPage> {
                   ),
                   margin: const EdgeInsets.only(top: 20,left: 30, right: 30),
                   child:TextField(
+                  controller: nameController,
+                  decoration: InputDecoration(
+                    border: OutlineInputBorder(borderRadius: BorderRadius.circular(15)),
+                    labelText: 'Name',
+                  ),),
+                ),
+
+                Container(
+                   decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  margin: const EdgeInsets.only(top: 20,left: 30, right: 30),
+                  child:TextField(
                   controller: emailController,
                   decoration: InputDecoration(
                     border: OutlineInputBorder(borderRadius: BorderRadius.circular(15)),
@@ -99,7 +115,11 @@ class _SignUpPageState extends State<SignUpPage> {
                 Container(
                   margin: const EdgeInsets.only(top: 20),
                   child: ElevatedButton(
-                    onPressed: signUpUser,
+                    onPressed: () async{
+                      if (await FirebaseAuth.instance.currentUser != null) {
+                      FirebaseAuth.instance.signOut();}
+                      signUpUser();
+                    },
                     child: const Text('Sign Up'),
                     style: ElevatedButton.styleFrom(
                       backgroundColor: const Color(0xFF081035),

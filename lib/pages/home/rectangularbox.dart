@@ -24,7 +24,7 @@ class _RboxState extends State<Rbox> {
         child:  Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
-            const SizedBox(height: 10),
+            const SizedBox(height: 40),
             const Header(),
             SizedBox(
             height: 150,

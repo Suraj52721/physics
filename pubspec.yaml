@@ -42,6 +42,11 @@ dependencies:
   firebase_auth: ^4.6.3
   firebase_storage: ^11.2.3
   firebase_ui_firestore: ^1.5.3
+  cloud_firestore: ^4.8.1
+  animate_do: ^3.0.2
+  flutter_tts: ^3.7.0
+  speech_to_text: ^6.1.1
+  http: ^0.13.5
 
 dev_dependencies:
   flutter_test:
@@ -73,6 +78,8 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/images/nucleus.svg
+    - assets/images/
+    - assets/sounds/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
@@ -86,9 +93,11 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  # fonts:
-  #   - family: Schyler
-  #     fonts:
+  fonts:
+    - family: Cera Pro
+      fonts:
+        - asset: assets/fonts/Cera-Pro-Bold.otf
+        - asset: assets/fonts/Cera-Pro-Medium.otf
   #       - asset: fonts/Schyler-Regular.ttf
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic

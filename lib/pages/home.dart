@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:physics/pages/home/rectangularbox.dart';
 import 'package:physics/pages/profile.dart';
 import 'package:physics/pages/todo.dart';
-import 'package:physics/pages/assignments.dart';
+import 'package:physics/pages/chatgpt/home_page.dart';
 
 
 
@@ -29,8 +29,8 @@ class _HomeState extends State<Home> {
         backgroundColor: Color(0xFF081035),
       ),
       const BottomNavigationBarItem(
-        icon: Icon(Icons.book),
-        label: 'Assignments',
+        icon: Icon(Icons.chat),
+        label: 'Assistant',
         backgroundColor: Color(0xFF081035),
       ),
       const BottomNavigationBarItem(
@@ -46,7 +46,7 @@ class _HomeState extends State<Home> {
     ];
     final List pages = [
       const Rbox(),
-      const Assignments(),
+      const HomePage(),
       const ToDo(),
       Profile(),
     ];

@@ -44,6 +44,7 @@ class _ToDoState extends State<ToDo> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
+          const SizedBox(height: 40,),
           const Text(
             'Your  ToDo\'s  Here',
             style: TextStyle(
