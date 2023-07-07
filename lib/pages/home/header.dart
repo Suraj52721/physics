@@ -1,5 +1,7 @@
+import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:physics/pages/home/notification.dart';
 
 class Header extends StatefulWidget {
   const Header({super.key});
@@ -22,25 +24,35 @@ class _HeaderState extends State<Header> {
           width: double.infinity,
           height: double.infinity,
           alignment: Alignment.center,
-          child: const Text(
-                'Department of Physics',
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  fontSize: 30,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white,
+          child: BounceInDown(
+            child: Text(
+                  'Welcome to Physics',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontSize: 30,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                  ),
                 ),
-              ),
+          ),
         ),
       
       Positioned(
-        top: 7,
+        top: 5,
         right: 20,
         child: IconButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const NotificationPage(),
+              ),
+            );
+          },
           icon: const Icon(
             Icons.notifications,
             color: Colors.white,
+            
           ),
         ),
       ),

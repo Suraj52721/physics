@@ -4,12 +4,23 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:physics/pages/home.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_storage/firebase_storage.dart';
 
 
 void main() async{
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
+  await Firebase.initializeApp(
+    options: const FirebaseOptions(
+      appId: '1:218254275995:android:f19e6200719aed89365d3e',
+      messagingSenderId: '1053576780490',
+      projectId: 'physics-78e4c',
+      apiKey: 'AIzaSyDEdBoau5QDRf83zV6kMvDxuIvdIyyMCgQ',
+      databaseURL: 'https://physics-78e4c-default-rtdb.firebaseio.com/',
+      storageBucket: 'gs://physics-78e4c.appspot.com',
+    ),
+  );
   await FirebaseFirestore.instance;
+  await FirebaseStorage.instance;
 
   runApp(const Physics());
 }

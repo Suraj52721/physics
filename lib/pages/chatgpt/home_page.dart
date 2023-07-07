@@ -219,20 +219,6 @@ class _HomePageState extends State<HomePage> {
             if (await speechToText.hasPermission &&
                 speechToText.isNotListening) {
               await startListening();
-              if (lastWords.isNotEmpty) {
-                final speech = await openAIService.isArtPromptAPI(lastWords);
-                if (speech.contains('https')) {
-                  generatedImageUrl = speech;
-                  generatedContent = null;
-                  setState(() {});
-                } else {
-                  generatedImageUrl = null;
-                  generatedContent = speech;
-                  setState(() {});
-                  await systemSpeak(speech);
-                }
-                await stopListening();
-              }
             } else if (speechToText.isListening) {
               final speech = await openAIService.isArtPromptAPI(lastWords);
               if (speech.contains('https')) {

@@ -13,12 +13,19 @@ class Cardbox extends StatefulWidget {
 class _CardboxState extends State<Cardbox> {
   @override
   Widget build(BuildContext context) {
-    return Card(
-                  shape: const RoundedRectangleBorder(
+    return Container(
+                  decoration: BoxDecoration(
+                    color: Color.fromARGB(0, 39, 4, 105).withOpacity(0.35),
+                    border: Border.all(
+                      color: Colors.black,
+                      width: 1,
+                    ),
                     borderRadius: BorderRadius.only(
                       topLeft: Radius.circular(30),
-                    )
+                    ),
+                    shape: BoxShape.rectangle,
                   ),
+                  
                   child: InkWell(
                     onTap: () {
                       Navigator.push(
@@ -40,7 +47,7 @@ class _CardboxState extends State<Cardbox> {
                           style: const TextStyle(
                             fontSize: 25,
                             fontWeight: FontWeight.bold,
-                            color: Color(0xFF081035),
+                            color: Colors.white,
                           ),
                         ),
                       ),

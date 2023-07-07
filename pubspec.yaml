@@ -47,6 +47,11 @@ dependencies:
   flutter_tts: ^3.7.0
   speech_to_text: ^6.1.1
   http: ^0.13.5
+  path_provider: ^2.0.15
+  open_file: ^3.3.2
+  permission_handler: ^10.4.1
+  syncfusion_flutter_pdfviewer: ^20.4.54
+  firebase_messaging: ^14.6.4
 
 dev_dependencies:
   flutter_test:
@@ -78,6 +83,10 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/images/nucleus.svg
+    - assets/images/signin_balls.png
+    - assets/images/space_signup.jpeg
+    - assets/images/space_login.jpeg
+    - assets/images/iron_home.png
     - assets/images/
     - assets/sounds/
   #   - images/a_dot_ham.jpeg
