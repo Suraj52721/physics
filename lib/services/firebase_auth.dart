@@ -42,10 +42,6 @@ class FirebaseAuthMethods {
     } on FirebaseAuthException catch (e) {
       showSnackBar(context, e.message!);
     }
-
-
-
-
   }
 
 

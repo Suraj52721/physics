@@ -52,6 +52,7 @@ dependencies:
   permission_handler: ^10.4.1
   syncfusion_flutter_pdfviewer: ^20.4.54
   firebase_messaging: ^14.6.4
+  provider: ^6.0.5
 
 dev_dependencies:
   flutter_test:
@@ -84,7 +85,7 @@ flutter:
   assets:
     - assets/images/nucleus.svg
     - assets/images/signin_balls.png
-    - assets/images/space_signup.jpeg
+    - assets/images/space_signup.jpg
     - assets/images/space_login.jpeg
     - assets/images/iron_home.png
     - assets/images/

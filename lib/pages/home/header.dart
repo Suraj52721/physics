@@ -26,7 +26,7 @@ class _HeaderState extends State<Header> {
           alignment: Alignment.center,
           child: BounceInDown(
             child: Text(
-                  'Welcome to Physics',
+                  'Physics',
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontSize: 30,

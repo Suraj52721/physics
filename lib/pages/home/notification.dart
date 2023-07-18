@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
 
+
 class NotificationPage extends StatefulWidget {
   const NotificationPage({super.key});
+  
 
   @override
   State<NotificationPage> createState() => _NotificationPageState();
 }
+
 
 class _NotificationPageState extends State<NotificationPage> {
   @override
@@ -16,7 +19,8 @@ class _NotificationPageState extends State<NotificationPage> {
         backgroundColor: const Color(0xFF081035),
       ),
       body: Container(
-        child: const Text('Notification Page'),
+        alignment: Alignment.center,
+        child: const Text('No New Notification', style: TextStyle(fontSize: 25),),
       ),
     );
   }

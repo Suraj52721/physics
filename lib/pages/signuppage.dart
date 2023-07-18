@@ -41,7 +41,7 @@ class _SignUpPageState extends State<SignUpPage> {
         decoration: BoxDecoration(
         color: const Color(0xFF081035),
         image: const DecorationImage(
-          image: AssetImage('images/space_signup.jpeg'),
+          image: AssetImage('assets/images/space_signup.jpg'),
           fit: BoxFit.cover,
         ),),
         
